@@ -3,7 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
+li {
+  list-style: none
+}
 .menu {
 display: flex;
 justify-content: center
@@ -11,6 +13,23 @@ justify-content: center
 .menu li {
   margin: 10px;
   padding:5px 0px;
-  list-style: none;
   cursor: pointer
+}
+.popular-list{
+  display: flex;
+flex-wrap: wrap;  
+  justify-content: space-between;
+}
+.popular-list li {
+  margin: 10px;
+  padding: 10px;
+display: flex;
+flex-direction: column
+}
+.popular-list li img {
+  width: 120px;
+  border-radius: 50%;
+}
+.username {
+  font-size:12px;
 }
