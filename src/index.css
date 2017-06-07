@@ -33,3 +33,12 @@ flex-direction: column
 .username {
   font-size:12px;
 }
+.nav {
+display: flex;
+}
+.nav li {
+  margin-right: 10px;
+}
+.active {
+  font-weight: bold;
+}

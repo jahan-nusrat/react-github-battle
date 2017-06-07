@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Popular from './Popular';
-import { Router, BrowserRouter, } from 'react-router-dom';
+import Battle from './Battle';
+import Home from './Home'
+import NavBar from './NavBar'
+import { Switch, Route, BrowserRouter as Router, } from 'react-router-dom';
 
 
 class App extends Component {
@@ -10,7 +13,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <BrowserRouter path='/popular' component='Popular' ></BrowserRouter>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/battle" component={Battle} />
+            <Route path="/popular" component={Popular} />
+            <Route render={()=>{
+              return (
+                <p>Page Not Found</p>
+              )
+              }}/>
+          </Switch>
         </div>
       </Router>
 
